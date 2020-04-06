@@ -77,3 +77,6 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
 
 #### Details
 ![Details](https://github.com/ChristianMc2/MovieApp/blob/master/appDetails.png)
+
+
+### Thanks for reading
