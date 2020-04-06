@@ -72,5 +72,8 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
  
  
  ## Index and Details page
- 
+#### Index
 ![Index](https://github.com/ChristianMc2/MovieApp/blob/master/appIndexLarge.png)
+
+#### Details
+![Details](https://github.com/ChristianMc2/MovieApp/blob/master/appDetails.png)
