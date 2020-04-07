@@ -77,7 +77,9 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
  
  ## Index and Details page
 #### Index
-``` {% extends 'Movie/Movie_base.html' %}
+Inherits the template of Movie_base.html.
+``` 
+{% extends 'Movie/Movie_base.html' %}
 {% load staticfiles %}
 {% block templatecontent %}
 
@@ -131,7 +133,8 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
 ![Index](https://github.com/ChristianMc2/MovieApp/blob/master/appIndexLarge.png)
 
 #### Details
-``` {% extends 'Movie/movie_base.html' %}
+``` 
+{% extends 'Movie/movie_base.html' %}
 {% load staticfiles %}
 {% block templatecontent %}
 <section>
@@ -167,6 +170,7 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
     </div>
 </section>
 {% endblock %} 
+
 ```
 
 ![Details](https://github.com/ChristianMc2/MovieApp/blob/master/appDetails.png)
