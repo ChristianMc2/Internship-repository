@@ -176,5 +176,28 @@ Inherits the template of Movie_base.html.
 
 ![Details](https://github.com/ChristianMc2/MovieApp/blob/master/appDetails.png)
 
+### Create page
+
+```
+{% extends 'Movie/movie_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section>
+    <div class="flex-container">
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            {{ form.non_field_errors }}
+            <button class="primary-bright-button" type="submit"> Add to Collection </button>
+        </form>
+        <hr />
+        <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'index' %}'">Back to Collection</button>
+    </div>
+</section>
+{% endblock %}
+```
+
 
 ### Thanks for reading
