@@ -42,7 +42,13 @@ def edit_movie(request, pk):
 ```    
     
  ### Models
- Here we have the models file
+ ##### Tuples
+ The tuples below will store the first value in the database and the second value will be an option on a dropdown list. 
+ 
+ ##### Class
+ The class below describes the structure of a database table. Each field will be a different column and will only accept submissions     that meet the columns criteria which is listed in the parenthesis at the end of the line. The following code assigns the name Movies to the model manager ``` Movies = models.Manager()```. The model manager is an interface for interacting with the database. In the following code we are telling Python how to display an object ```
+ def __str__(self):
+        return self.title ```  . If you are to make a change to the class you should make sure to run the following commands "python manage.py makemigrations" and "python manage.py migrate".
 ``` 
 MOVIE_RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'), (6, '6'), (7, '7'), (8, '8'), (9, '9'),
                 (10, '10'))
