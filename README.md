@@ -166,7 +166,9 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
         <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'index' %}'">Back to Collection</button>
     </div>
 </section>
-{% endblock %}  ```
+{% endblock %} 
+```
+
 ![Details](https://github.com/ChristianMc2/MovieApp/blob/master/appDetails.png)
 
 
