@@ -1,7 +1,7 @@
 # The Movie App
 ## Introduction
 I spent 10 days working with a team of software developers. Our goal was to create a website written in Python and using the 
-Entity Framework 6 Code First Database for data access and ASP.NET MVC5. During the course of this project I was tasked with
+Django Framework. I used PyCharm as. During the course of this project I was tasked with
 making my own web application to be added to the website our team was building. My typical routine consisted of updating my local branch,
 participating in a daily stand-up, checking Azure DevOps for my assigned tasks, checking out a new branch for that task, completing the
 task, commiting the branch, pushing the branch, and then creating a pull request on Azure. I found this project very rewarding as I was
@@ -28,7 +28,9 @@ def date_added_new(request):  # arranges table by primary key with higher number
     
     
 ### Edit button
-Here we have the edit button which allows you to change an item in the database
+When the edit button is clicked it will take the primary key from the row that the button was attached to and give it to 
+the edit_movie function. The function then says if there is the provided primary key in the FavoriteMovies table then pull up the instance of the form with the same primary key, otherwise have a 404 page appear on the users screen. Then it will check the forms.py file to see if the form is valid. If the form is valid it will save the data to the database and redirect the user to the index page, otherwise it will return the user to the form.
+
 ```
 def edit_movie(request, pk):  
     movie = get_object_or_404(FavoriteMovies, pk=pk)
