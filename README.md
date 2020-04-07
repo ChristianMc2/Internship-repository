@@ -133,7 +133,15 @@ Inherits the template of Movie_base.html.
 ![Index](https://github.com/ChristianMc2/MovieApp/blob/master/appIndexLarge.png)
 
 #### Details
-Inherits the template of Movie_base.html.
+Inherits the template of Movie_base.html. Then uses the following function which takes the selected primary key and returns a render of the row the primary key is associated with.
+```  
+     def details_movie(request, pk): 
+     pk = int(pk)
+     movie = get_object_or_404(FavoriteMovies, pk=pk)
+     context = {'movie': movie}
+     return render(request, 'Movie/Movie_details.html', context)
+```
+The details page will then match the data from the selected row to the columns listed on the html page. A button appears at the bottom that will take the user back to the index page if clicked.
 ``` 
 {% extends 'Movie/movie_base.html' %}
 {% load staticfiles %}
