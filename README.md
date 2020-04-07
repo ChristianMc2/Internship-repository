@@ -133,6 +133,7 @@ Inherits the template of Movie_base.html.
 ![Index](https://github.com/ChristianMc2/MovieApp/blob/master/appIndexLarge.png)
 
 #### Details
+Inherits the template of Movie_base.html.
 ``` 
 {% extends 'Movie/movie_base.html' %}
 {% load staticfiles %}
