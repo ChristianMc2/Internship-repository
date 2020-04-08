@@ -7,7 +7,7 @@ making my own web application to be added to the website our team was building. 
 
 ### Sort Functions
 Here are two of my sort functions. They use the primary key to determine the order. It takes everything from the FavoriteMovies
-table and the function date_added_old sorts from the lowest primary key to the highest primary key using the django function order_by. The function date_ added_new reverses the order of the last sort due to the addition of the hyphen in front of the id.
+table and the function date_added_old and sorts from the lowest primary key to the highest primary key using the django function order_by. The function date_ added_new reverses the order of the last sort due to the addition of the hyphen in front of the id.
 ```
 def date_added_old(request):  # arranges table by primary key with lower numbers first
     obj = FavoriteMovies.Movies.all()
@@ -44,13 +44,8 @@ def edit_movie(request, pk):
  ### Models
  ##### Tuples
  The tuples below will store the first value in the database and the second value will be an option on a dropdown list. 
- 
- ##### Class
- The class below describes the structure of a database table. Each field will be a different column and will only accept submissions     that meet the columns criteria which is listed in the parenthesis at the end of the line. The following code assigns the name Movies to the model manager ``` Movies = models.Manager()```. The model manager is an interface for interacting with the database. In the following code we are telling Python how to display an object ```
- def __str__(self):
-        return self.title ```  . If you are to make a change to the class you should make sure to run the following commands ``` python manage.py makemigrations ``` and ``` python manage.py migrate ```.
-``` 
-MOVIE_RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'), (6, '6'), (7, '7'), (8, '8'), (9, '9'),
+ ```
+ MOVIE_RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'), (6, '6'), (7, '7'), (8, '8'), (9, '9'),
                 (10, '10'))
 
 MOVIE_GENRE = (('Action', 'Action'), ('Adventure', 'Adventure'), ('Comedy', 'Comedy'), ('Documentary', 'Documentary'),
@@ -58,7 +53,13 @@ MOVIE_GENRE = (('Action', 'Action'), ('Adventure', 'Adventure'), ('Comedy', 'Com
                ('Mystery', 'Mystery'), ('Romance', 'Romance'), ('Romantic Comedy', 'Romantic Comedy'),
                ('Science Fiction', 'Science Fiction'), ('Slice of Life', 'Slice of Life'), ('Thriller', 'Thriller'),
                ('Western', 'Western'), ('Zombie', 'Zombie'))
-
+ ```
+ 
+ ##### Class
+ The class below describes the structure of a database table. Each field will be a different column and will only accept submissions     that meet the columns criteria which is listed in the parenthesis at the end of the line. The following code assigns the name Movies to the model manager ``` Movies = models.Manager()```. The model manager is an interface for interacting with the database. In the following code we are telling Python how to display an object ```
+ def __str__(self):
+        return self.title ```  . If you are to make a change to the class you should make sure to run the following commands ``` python manage.py makemigrations ``` and ``` python manage.py migrate ```.
+``` 
 
 class FavoriteMovies(models.Model):  # Creating a class for people to input their favorite movies
     title = models.CharField(max_length=55)
