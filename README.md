@@ -207,6 +207,139 @@ The CSRF token sends a random value to the user and when that user makes a  requ
 </section>
 {% endblock %}
 ```
+### Styling
+Below is the CSS I used for this project.
+```
+.cover-movie {
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/movie_cover.jpg') right bottom;
+  background-repeat: no-repeat;
+  background-color: darkGray;
+  background-size: cover;
+  height: 80vh;
+}
+
+.movie_center {
+    display:inline-block;
+    padding:2px 3px;
+    color: var(--dark);
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    line-height:1.5em;
+}
+
+#movieCollectionPage {
+    padding: 40px;
+}
+
+#movieCollectionPage table th {
+
+    background-color:Black;
+    color: blueviolet;
+    text-align:center;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 5px 7px;  /* first number is top and bottom, second is left and right */
+}
+
+#movieCollectionPage table td {
+
+     background-color:midnightblue;
+     color: crimson;
+     font-weight: 600;
+     text-align:center;
+     font-size: 18px;
+     padding: 10px;
+}
+
+.bod {
+      background-color: darkGray;
+}
+
+#detail-button {
+    color: white;
+    background-color: green;
+    font-weight: 700;
+}
+
+#movieDetailsPage {
+    padding: 40;
+}
+
+#movieDetailsPage table td {
+    color: white;
+    font-weight: 900;
+    text-align: left;
+    font-size: 23px;
+    padding: 10px;
+    border-left: 4px solid lightBlue;
+    border-bottom: 2px solid orange;
+}
+
+#movieDetailsPage table th {
+    color: midnightblue;
+    font-weight: 1000;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 5px 7px;
+    border-bottom: 2px solid lawngreen;
+
+}
+
+#edit-button {
+    color: white;
+    background-color: orange;
+    font-weight: 700;
+}
+
+#delete-button {
+    color: white;
+    background-color: red;
+    font-weight: 700;
+}
+
+#del-quest {
+    font-weight: 900;
+    font-size: xx-large;
+    padding: 70px 0px 10px 30px;
+    text-align: center;
+}
+
+#cancel-confirm {
+    font-weight: 700;
+    font-size: 32;
+    padding: 0px 0px 70px 30px;
+    text-align: center;
+}
+
+#sort {
+    padding-left: 500px;
+    color: Lime;
+    font-size: 25px;
+}
+
+.sort-button {
+    width: 6%;
+    margin-bottom: 10px;
+    color: darkBlue;
+    font-weight: 900;
+    border: 4px solid blue;
+    background-color: cyan;
+}
+
+#indbg {
+    background-color: black;
+}
+
+#add-button {
+    color: midnightblue;
+    background-color: crimson;
+    border: 4px solid crimson;
+    font-size: 17px;
+    font-weight: bold;
+}
+```
 
 
 ### Thanks for reading
