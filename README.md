@@ -77,7 +77,7 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
  
  ## Index and Details page
 #### Index
-Inherits the template of Movie_base.html.
+Inherits the template of Movie_base.html. Displays various sort buttons and a database table for the FavoriteMovies class.
 ``` 
 {% extends 'Movie/Movie_base.html' %}
 {% load staticfiles %}
@@ -185,7 +185,7 @@ The details page will then match the data from the selected row to the columns l
 ![Details](https://github.com/ChristianMc2/MovieApp/blob/master/appDetails.png)
 
 ### Create page
-
+The CSRF token sends a random value to the user and when that user makes a  request it will check to see if the value on your end matches the value on their end. A new CSRF token is sent everytime a page with the CSRF token is loaded. CSRF tokens should be used for POST, PUT and DELETE methods as they are deemed unsafe by the IETF. GET methods are generally safe as they are read only. form.as_table creates a table with all of the parameters defined in the forms.py file and form.non_field_errors makes sure that it 
 ```
 {% extends 'Movie/movie_base.html' %}
 {% load staticfiles %}
