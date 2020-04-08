@@ -43,7 +43,7 @@ def edit_movie(request, pk):
     
  ### Models
  ##### Tuples
- The tuples below will store the first value in the database and the second value will be an option on a dropdown list. 
+ In the tuples below the first value will be stored in the database and the second value will be an option on a dropdown list. 
  ```
  MOVIE_RATING = ((0, '0'), (1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'), (6, '6'), (7, '7'), (8, '8'), (9, '9'),
                 (10, '10'))
