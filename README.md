@@ -186,7 +186,7 @@ The details page will then match the data from the selected row to the columns l
 ![Details](https://github.com/ChristianMc2/MovieApp/blob/master/appDetails.png)
 
 ### Create page
-The CSRF token sends a random value to the user and when that user makes a  request it will check to see if the value on your end matches the value on their end. A new CSRF token is sent everytime a page with the CSRF token is loaded. CSRF tokens should be used for POST, PUT and DELETE methods as they are deemed unsafe by the IETF. GET methods are generally safe as they are read only. form.as_table creates a table with all of the parameters defined in the forms.py file and form.non_field_errors makes sure that it 
+The CSRF token sends a random value to the user and when that user makes a  request it will check to see if the value on your end matches the value on their end. A new CSRF token is sent everytime a page with the CSRF token is loaded. CSRF tokens should be used for POST, PUT and DELETE methods as they are deemed unsafe. GET methods are generally safe as they are read only. form.as_table creates a table with all of the parameters defined in the forms.py file.
 ```
 {% extends 'Movie/movie_base.html' %}
 {% load staticfiles %}
