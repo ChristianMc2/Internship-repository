@@ -1,0 +1,49 @@
+{% extends 'Movie/Movie_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+
+<section id="indbg">
+    <h3 id="sort">Sort By</h3>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'dateNew' %}'">Date added <br> New - Old</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'rateHigh' %}'">Rating <br> High - Low</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'titleA' %}'">Title <br> A-Z</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'directorA' %}'">Director <br> A-Z</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'yearHigh' %}'">Year <br> High - Low</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'countryA' %}'">Country <br> A-Z</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'genreA' %}'">Genre <br> A-Z</button>
+    <br>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'dateOld' %}'">Date added <br> Old - New</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'rateLow' %}'">Rating <br> Low - High</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'titleZ' %}'">Title <br> Z-A</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'directorZ' %}'">Director <br> Z-A</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'yearLow' %}'">Year <br> Low - High</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'countryZ' %}'">Country <br> Z-A</button>
+    <button class="sort-button" type="button" onclick=" location.href='{% url 'genreZ' %}'">Genre <br> Z-A</button>
+    <div class="flex-container Movie" id="movieCollectionPage">
+        <table class="table-striped">
+            <tr>
+                <th class="col-md">Title</th>
+                <th class="col-md">Director</th>
+                <th class="col-md">Genre</th>
+                <th class="col-md">Year of release</th>
+                <th class="col-md">Country of origin</th>
+                <th class="col-md">Rating</th>
+            </tr>
+            {% for FavoriteMovies in sorted_date %}
+                <tr>
+                    <td class="col-md">{{FavoriteMovies.title}}</td>
+                    <td class="col-md">{{FavoriteMovies.director}}</td>
+                    <td class="col-md">{{FavoriteMovies.genre}}</td>
+                    <td class="col-md">{{FavoriteMovies.year}}</td>
+                    <td class="col-md">{{FavoriteMovies.country}}</td>
+                    <td class="col-md">{{FavoriteMovies.rating}}</td>
+                    <td class="col-btn"><a href="../{{FavoriteMovies.pk}}/Details/"><button class="primary-light-button" id="detail-button">Details</button></a></td>
+                    <td class="col-btn"><a href="../{{FavoriteMovies.pk}}/Edit/"><button class="primary-light-button" id="edit-button">Edit</button></a></td>
+                    <td class="col-btn"><a href="../{{FavoriteMovies.pk}}/Delete/"><button class="primary-light-button" id="delete-button">Delete</button></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button class="primary-bright-button" id="add-button" type="button" onclick=" location.href='{% url 'createMovie' %}'">Add Movie</button>
+    </div>
+</section>
+{% endblock %}

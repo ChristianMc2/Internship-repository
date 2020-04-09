@@ -1,0 +1,19 @@
+{% extends 'base.html' %} #Extends the  base template from the project to the base template of this app
+{% load staticfiles %}
+
+{% block pagetop-css %} cover-movie {% endblock %}  #Loads the cover-movie styling from the style file
+
+{% block page-title %}The Movie App{% endblock %}   # Title
+{% block page-subtitle %}Search for movies{% endblock %}   # Subtitle
+{% block button1 %}<a href="{% url 'movieHome' %}" class="contact-btn">Movie Home</a>{% endblock %}
+{% block button2 %}<a href="{% url 'index' %}" class="contact-btn">Movies</a>{% endblock %}
+
+
+{% block appcontent %}
+
+    <section class="bod">
+        {% block templatecontent %}{% endblock %}
+{% endblock %}
+    </section>
+
+

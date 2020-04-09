@@ -1,0 +1,36 @@
+{% extends 'Movie/movie_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section>
+    <div class="flex-container Movie" id="movieDetailsPage">
+        <table>
+            <tr>
+                <th class="col-det">Title</th>
+                <td>{{movie.title}}</td>
+            </tr>
+            <tr>
+                <th class="col-det">Director</th>
+                <td>{{movie.director}}</td>
+            </tr>
+            <tr>
+                <th class="col-det">Genre</th>
+                <td>{{movie.genre}}</td>
+            </tr>
+            <tr>
+                <th class="col-det">Year</th>
+                <td>{{movie.year}}</td>
+            </tr>
+            <tr>
+                <th class="col-det">Country</th>
+                <td>{{movie.country}}</td>
+            </tr>
+            <tr>
+                <th class="col-det">Rating</th>
+                <td>{{movie.rating}}</td>
+            </tr>
+        </table>
+        <br>
+        <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'index' %}'">Back to Collection</button>
+    </div>
+</section>
+{% endblock %}

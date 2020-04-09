@@ -1,0 +1,14 @@
+{% extends 'Movie/movie_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section>
+    <form action='.' method="POST">
+        {% csrf_token %}
+        <h1 id="del-quest">Do you want to delete "{{ movie.title }}"?</h1>
+        <p id="cancel-confirm"><input type='submit' value='Yes' /> <a href='../../../index'>Cancel</a></p>
+    </form>
+</section>
+{% endblock %}
+
+#  if yes then the views function will see POST and delete the object from the dB
+#  If the cancel anchor tag is hit then you will be redirected to the index page while the object remains in the dB
