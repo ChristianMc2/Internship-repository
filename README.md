@@ -135,6 +135,7 @@ Inherits the template of Movie_base.html. Displays various sort buttons and a da
   ```
 ![Index](https://github.com/ChristianMc2/MovieApp/blob/master/appIndexLarge.png)
 
+
 #### Details
 Inherits the template of Movie_base.html. Then uses the following function which takes the selected primary key and returns a render of the row the primary key is associated with.
 ```  
