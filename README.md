@@ -7,6 +7,7 @@ making my own web application to be added to the website our team was building. 
 ### SCRUM
 Throughout this sprint we utilized the SCRUM framework. The sprint began with a sprint planning in which we went over what we would be doing and what our plans were so as not to start on the wrong path. We would start the day with a 15 minute daily stand-up. During the standup we discuss what we did yesterday, any roadblocks we may have had and what we will do today. These meetings are a great way to keep everyone else on the team updated as well as being a great way to reflect on the past day. After these meetings I would check my product backlog on Azure DevOps to see what user stories I have assigned. At the end of the week we had a code retrospective where we had more time to reflect on the past week and how we could improve next time. I find the iterative development of Agile to be very helpful as I can find problems quickly due to the fact that I am testing and pushing code at regular intervals.
 
+
 ### Sort Functions
 Here are two of my sort functions. They use the primary key to determine the order. It takes everything from the FavoriteMovies
 table and the function date_added_old and sorts from the lowest primary key to the highest primary key using the django function order_by. The function date_ added_new reverses the order of the last sort due to the addition of the hyphen in front of the id.
