@@ -78,6 +78,7 @@ class FavoriteMovies(models.Model):  # Creating a class for people to input thei
  ```
  
  
+ 
  ## Index and Details page
 #### Index
 Inherits the template of Movie_base.html. Displays various sort buttons and a database table for the FavoriteMovies class.
